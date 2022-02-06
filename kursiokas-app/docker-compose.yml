@@ -1,0 +1,11 @@
+version: '3'
+services:
+    web:
+        build: .
+        depends_on:
+            - db
+    db:
+        image: 'mysql:latest'
+        environment:
+            MYSQL_ROOT_PASSWORD: 'slaptazodis'
+            MYSQL_DATABASE: 'kursiokas'
